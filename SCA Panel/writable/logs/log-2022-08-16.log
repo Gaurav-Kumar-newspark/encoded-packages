@@ -1,0 +1,114 @@
+CRITICAL - 2022-08-16 04:23:33 --> Undefined index: g-recaptcha-response
+#0 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Login.php(59): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Login->login()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-08-16 04:51:38 --> Undefined variable: totalTime
+#0 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/Debug/Toolbar/Views/toolbar.tpl.php(40): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/Debug/Toolbar.php(501): include('/var/www/vhosts...')
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/Debug/Toolbar.php(464): CodeIgniter\Debug\Toolbar->format()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Config/Events.php(48): CodeIgniter\Debug\Toolbar->respond()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/Events/Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(302): CodeIgniter\Events\Events::trigger()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-08-16 05:09:01 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:09:38 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:09:41 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:10:06 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:10:46 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:11:00 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:11:19 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:11:40 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:12:09 --> mkdir(): Permission denied
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(176): mkdir()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/HTTP/Files/UploadedFile.php(130): CodeIgniter\HTTP\Files\UploadedFile->setPath()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(38): CodeIgniter\HTTP\Files\UploadedFile->move()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->generalsettings()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-08-16 05:18:34 --> unlink(/var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/uploads/media/1660645012_3c08cd8a771b283f1a76.png): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/app/Controllers/Settings.php(172): unlink()
+#2 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(825): App\Controllers\Settings->removelogo()
+#3 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/system/CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/vhosts/hosting.iptvbillingsolution.com/public/testingsca/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

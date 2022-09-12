@@ -1,0 +1,154 @@
+<?php 
+if(isset($thiscontrol) && !empty($thiscontrol)){
+    if(isset($returndata) && !empty($returndata))
+    {
+        $sitekey = (isset($returndata[0]->secratekey) && !empty($returndata[0]->secratekey))?$thiscontrol->customencrption("decode", $returndata[0]->secratekey):"";
+        $secratekey = (isset($returndata[0]->sitekey) && !empty($returndata[0]->sitekey))?$thiscontrol->customencrption("decode", $returndata[0]->sitekey):"";
+    }
+}
+?>
+<style>
+#togglesecratekey{
+position: absolute;
+right: 25px;
+margin-top: -35px;
+font-size: 15px;
+}
+</style>
+<div class="main-content app-content">
+    <!-- container -->
+    <div class="main-container container-fluid">
+
+        <!-- breadcrumb -->
+        <div class="breadcrumb-header justify-content-between">
+            <div class="left-content" style="padding-left: 10px!important;">
+        
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item tx-15">Dashboard</li>
+                    <li class="breadcrumb-item active" aria-current="page">Security Settings</li>
+                    
+                </ol>
+        
+            </div>
+        </div>
+        <!-- /breadcrumb -->
+            
+        <!-- row -->
+        <div class="col-lg-8 col-xl-8 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xl-12">
+                            <?php
+                                if (isset($_SESSION['captchamsg']) && !empty($_SESSION['captchamsg'])) 
+                                {
+                                    if ($_SESSION['captchamsg']['result'] == 'success') {
+                                    ?>
+                                        <div class="alert alert-success alert-dismissible" style="width: 100%;">
+                                            <b>Success!&nbsp;</b><?php echo $_SESSION['captchamsg']['message']; ?>
+                                        </div>
+                                    <?php
+
+                                    }elseif($_SESSION['captchamsg']['result'] == 'error'){
+                                        ?>
+                                            <div class="alert alert-danger alert-dismissible" style="width: 100%;">
+                                                <b>Error!&nbsp;</b><?php echo $_SESSION['captchamsg']['message']; ?>
+                                            </div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+                               
+                            <?php $attributes = ["id" => "securityform"];
+                             echo form_open("security",$attributes); ?>
+                            <?= csrf_field() ?>
+                        
+                            <label class="custom-control custom-checkbox form-label" style="margin-left: -25px;margin-bottom: 12px;"><span>Captcha:</span>
+                                <input type="checkbox" class="custom-control-input" name="captcha" value="on">
+                                <span class="custom-control-label"style="margin-left: 30px;">Enable/Disable</span>
+                            </label>
+                            <label for="sitekey" class="form-label mb-2">Google reCaptcha Sitekey</label>
+                                <input type="text" class="form-control mb-2 <?php if(isset($error) && !empty($error)){echo "is-invalid";}?>" name="sitekey" placeholder="Enter Sitekey"  value="">
+                                <p class="invalid-feedback"><?php if(isset($error) && !empty($error)){echo $error["sitekey"];} ?>
+                            </p>
+                    
+                            <label for="secrate" class="form-label mb-2">Google reCaptcha Secrate</label>
+                            <input type="password" class="form-control mb-2 <?php if(isset($error) && !empty($error)){echo "is-invalid";}?>" name="secratekey" placeholder="Enter Secratekey" id="secratekey" value=""><i class="far fa-eye" id="togglesecratekey" style="margin-left: -30px; cursor: pointer;"></i>
+                            <p class="invalid-feedback"><?php if(isset($error) && !empty($error)){echo $error["secratekey"];} ?>
+                            </p>
+                            <button type="button" name="submit" id="savechnages"  class="btn btn-primary mt-1">Save Changes</button>
+                            
+                            <?php echo form_close();?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("#togglesecratekey").click(function () {
+	var input = $("#secratekey");
+	if (input.attr("type") === "password") {
+        input.attr("type", "text");
+	} else {
+		input.attr("type", "password");
+	}
+   });
+
+   $("#savechnages").click(function(){
+     $("#userconfirmation").modal('show');
+        $("#adminpassword").click(function()
+        {
+            $('#adminpass-error').empty();
+        });
+        $(".modelclose").click(function()
+        {
+            $('#adminpassword').val('');
+            $('#adminpass-error').empty(); 
+        });
+        $("#securityconfbtn").click(function()
+        {
+           
+            adminpassword = $("#adminpassword").val();
+            $('#securityconfbtn').html('Processing...').prop("disabled",true);
+            jQuery.ajax({
+                type:"POST",
+                url:'<?php echo base_url("/confirmationadminpassword"); ?>',
+                data:
+                {
+                    action:"confirmationadminpassword",
+                    value:adminpassword,
+                },
+                success:function(response)
+                {
+                    var obj = $.parseJSON(response);  
+                    $('#securityconfbtn').html('Confirm').prop("disabled",false);
+                    $.each(obj, function(index,value)
+                    {
+                        if(index == "result" && value == "success")
+                        {
+                            $('#adminpass-error').empty();
+                            $("#adminpassword").trigger("reset");
+                            $("#securityform").submit();
+                        
+                            
+                        }else if(index == "result" && value == "error")
+                        {
+                            $('#adminpass-error').empty();
+                            $("#adminpass-error").append('Invalid Password!');
+                        }else if(index == "result" && value == "empty")
+                        {
+                            $('#adminpass-error').empty();
+                            $("#adminpass-error").append('Please Enter The Password First!');
+                        }   
+                    });
+                },
+            });  
+        });
+       
+   });
+
+});
+</script>

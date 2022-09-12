@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Controllers;
+
+class Testing extends BaseController
+{
+ 
+    public function test(){
+
+    	 $data = $this->adminconfigurationmodel->getWhere(["id" => 1])->getResult();
+         $data = $this->test->getWhere(["id" => 1])->getResult();
+         
+    	 echo "<pre>";print_r($data);die();
+
+        }
+}
+Worked On Security Google Recaptcha V2 & 2FA Security & Trakt Apiary Api  
