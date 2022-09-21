@@ -131,6 +131,14 @@ $routes->group('',['filter'=>'isLoggedIn'], function($routes)
 
     $routes->post("deletemultipalips", "Unblockips::deletemultipalips");
 
+    $routes->add("managedevices", "Device::managedevices");
+
+    $routes->add("deviceconfiguration", "Device::deviceconfiguration");
+
+    $routes->post("ajax_datatables", "Device::ajax_datatables");
+
+    $routes->add("removedevices/(:num)", "Device::removedevices/$1");
+
         
 });
 /******************* Filter End here ****************************/
